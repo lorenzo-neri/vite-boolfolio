@@ -6,8 +6,8 @@ export default {
   data() {
     return {
       message: 'Welcome back Vite+Vue',
-      base_url: 'http://127.0.0.1:8000/',
-      portfolio_api: 'api/projects',
+      base_url: 'http://127.0.0.1:8000',
+      portfolio_api: '/api/projects',
       projects: [],
 
     }
@@ -27,19 +27,17 @@ export default {
 </script>
 
 <template>
-  <div id="app">
-    {{ message }}
+  {{ message }}
 
-    <div class="container">
-      <div class="row">
-        <div v-for="project in projects.data" class="col">
-          <div class="card text-center">
-            <h2>{{ project.title }}</h2>
-          </div>
+  <div class="container">
+    <div class="row">
+      <div v-for="project in  projects.data " class="col">
+        <div class="card text-center">
+          <h2>{{ project.title }}</h2>
+          <img :src="base_url + '/storage/' + project.thumb" alt="">
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
