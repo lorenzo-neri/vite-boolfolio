@@ -30,11 +30,21 @@ export default {
   {{ message }}
 
   <div class="container">
-    <div class="row">
+    <div class="row row-cols-4">
       <div v-for="project in  projects.data " class="col">
         <div class="card text-center">
           <h2>{{ project.title }}</h2>
           <img :src="base_url + '/storage/' + project.thumb" alt="">
+
+          <div v-if="project.technologies">
+            <div v-for="technology in project.technologies" class="badge bg-primary">
+              {{ technology.tech }}
+            </div>
+
+          </div>
+
+
+          <p>{{ project.description }}</p>
         </div>
       </div>
     </div>
