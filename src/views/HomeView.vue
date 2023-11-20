@@ -9,7 +9,7 @@ export default {
     },
     data() {
         return {
-            message: 'Welcome back Vite+Vue',
+            /* message: 'Welcome back Vite+Vue', */
             base_url: 'http://127.0.0.1:8000',
             portfolio_api: '/api/projects',
             projects: [],
@@ -31,10 +31,7 @@ export default {
 </script>
 
 <template>
-    <router-link to="/" class="bg-danger">Home</router-link>
-
-
-    {{ message }}
+    <!-- {{ message }} -->
 
 
     <div class="container">
@@ -43,7 +40,8 @@ export default {
 
                 <ProjectCard :thumb="project.thumb" :base_url="base_url" :title="project.title" :type="project.type"
                     :description="project.description" :link_github="project.link_github"
-                    :link_project_online="project.link_project_online" :technologies="project.technologies"></ProjectCard>
+                    :link_project_online="project.link_project_online" :technologies="project.technologies"
+                    :slug="project.slug"></ProjectCard>
 
             </div>
         </div>

@@ -10,6 +10,8 @@ export default {
         description: String,
         link_github: String,
         link_project_online: String,
+
+        slug: String
     }
 }
 </script>
@@ -52,5 +54,6 @@ export default {
             </a>
 
         </div>
+        <router-link :to="{ name: 'project', params: { slug: project.slug } }">View project</router-link>
     </div>
 </template>
