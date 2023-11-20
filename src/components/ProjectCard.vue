@@ -17,9 +17,9 @@ export default {
 </script>
 
 <template>
-    <div class="card text-center">
+    <div class="card h-100 text-center">
         <h2>{{ title }}</h2>
-        <img :src="base_url + '/storage/' + thumb" alt="">
+        <img v-if="thumb" :src="base_url + '/storage/' + thumb" alt="">
 
         <div v-if="type">
             <div class="badge bg-success text-warning">
