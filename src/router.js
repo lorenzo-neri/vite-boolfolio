@@ -18,7 +18,7 @@ const routes = [
         path: '/', component: HomeView
     },
     {
-        path: '/project/:id', name: 'project', component: SingleProjectView
+        path: '/project/:slug', name: 'project', component: SingleProjectView
     }
 ]
 

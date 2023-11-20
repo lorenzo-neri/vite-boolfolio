@@ -54,6 +54,6 @@ export default {
             </a>
 
         </div>
-        <router-link :to="{ name: 'project', params: { slug: project.slug } }">View project</router-link>
+        <router-link :to="{ name: 'project', params: { slug: slug } }">View project</router-link>
     </div>
 </template>

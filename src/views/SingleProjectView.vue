@@ -9,19 +9,20 @@ export default {
     },
     data() {
         return {
-
-            projects: {},
+            base_url: 'http://127.0.0.1:8000',
+            portfolio_api: '/api/projects',
+            project: {},
 
         }
     },
     mounted() {
 
-        const url = `http://localhost:8000/api/projects/${this.$route.params.id}`;
+        const url = `http://localhost:8000/api/projects/${this.$route.params.slug}`;
 
         axios.get(url)
             .then(resp => {
                 console.log(resp.data.result);
-                this.post = resp.data.result
+                this.project = resp.data.result
             })
             .catch(err => {
                 console.log(err.message);
@@ -37,6 +38,8 @@ export default {
 
     <div class="container">
         <div class="row row-cols-4">
+
+            <!-- <ProjectCard :project="project"></ProjectCard> -->
 
             <ProjectCard :thumb="project.thumb" :base_url="base_url" :title="project.title" :type="project.type"
                 :description="project.description" :link_github="project.link_github"

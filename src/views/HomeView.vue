@@ -38,6 +38,8 @@ export default {
         <div class="row row-cols-4">
             <div v-for="project in  projects.data " class="col p-3">
 
+                <!-- <ProjectCard :project="project"></ProjectCard> -->
+
                 <ProjectCard :thumb="project.thumb" :base_url="base_url" :title="project.title" :type="project.type"
                     :description="project.description" :link_github="project.link_github"
                     :link_project_online="project.link_project_online" :technologies="project.technologies"
