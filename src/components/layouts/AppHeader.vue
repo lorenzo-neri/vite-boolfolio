@@ -7,6 +7,9 @@ export default {
 </script>
 
 <template>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <header>
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
             <div class="container">
@@ -23,16 +26,16 @@ export default {
                         </li>
 
 
-                        <!-- <li class="nav-item">
-              <router-link class="nav-link" to="/about">About</router-link>
-            </li>
+                        <li class="nav-item">
+                            <router-link class="nav-link" to="/contacts">Contacts</router-link>
+                        </li>
 
-            <li class="nav-item">
-              <router-link class="nav-link" to="/blog">Blog</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link class="nav-link" to="/contacts">Contacts</router-link>
-            </li> -->
+                        <!-- <li class="nav-item">
+                            <router-link class="nav-link" to="/blog">Blog</router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link class="nav-link" to="/contacts">Contacts</router-link>
+                        </li> -->
 
 
                     </ul>

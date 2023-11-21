@@ -14,8 +14,7 @@ export default {
 </script>
 
 <template>
-  <AppHeader>
-  </AppHeader>
+  <AppHeader></AppHeader>
 
   <!-- MAIN -->
   <main style="background-color: #76BED0;" class="py-4">
