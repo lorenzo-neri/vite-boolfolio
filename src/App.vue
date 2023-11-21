@@ -55,7 +55,7 @@ export default {
   </header>
 
   <!-- MAIN -->
-  <main class="py-4">
+  <main style="background-color: #76BED0;" class="py-4">
 
     <router-view></router-view>
 
