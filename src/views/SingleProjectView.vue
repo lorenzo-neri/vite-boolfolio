@@ -22,7 +22,16 @@ export default {
         axios.get(url)
             .then(resp => {
                 console.log(resp.data.result);
-                this.project = resp.data.result
+
+                if (resp.data.success) {
+
+                    this.project = resp.data.result
+
+                } else {
+
+                    this.$router.push({ name: 'NotFoundView' });
+
+                }
             })
             .catch(err => {
                 console.log(err.message);

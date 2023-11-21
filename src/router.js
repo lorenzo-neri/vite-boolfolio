@@ -4,6 +4,7 @@ import { createWebHashHistory, createRouter } from 'vue-router'
 
 import HomeView from './views/HomeView.vue'
 import SingleProjectView from './views/SingleProjectView.vue'
+import NotFoundView from './views/NotFoundView.vue'
 
 // 1. Define route components.
 
@@ -19,6 +20,9 @@ const routes = [
     },
     {
         path: '/project/:slug', name: 'project', component: SingleProjectView
+    },
+    {
+        path: '/:pathMatch(.*)*', name: 'NotFoundView', component: NotFoundView
     }
 ]
 
