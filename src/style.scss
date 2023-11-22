@@ -15,3 +15,21 @@ $bln-sw-warning: #fee003;
 
 //HEIGHT
 $bln-height: 90vh;
+
+* {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'PT Sans', sans-serif;
+    font-family: 'Pixelify Sans', sans-serif;
+
+}
+
+a {
+    color: $bln-sw-warning;
+    text-decoration: none;
+    transition: .5s;
+
+
+    &:hover {
+        color: $bln-secondary;
+    }
+}

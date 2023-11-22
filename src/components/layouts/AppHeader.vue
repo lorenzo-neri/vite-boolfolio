@@ -18,7 +18,7 @@ export default {
     background-repeat: repeat;">
         <nav class="navbar navbar-expand-sm navbar-dark">
             <div class="container">
-                <a class="navbar-brand" href="#">Boolfolio</a>
+                <a class="navbar-brand test fs-4" href="#">Boolfolio</a>
                 <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
                     aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -31,8 +31,8 @@ export default {
                         </li> -->
 
 
-                        <li class="nav-item">
-                            <router-link class="nav-link" to="/contacts">Contacts</router-link>
+                        <li class="nav-item fs-5 ps-5">
+                            <router-link class="nav-link test" to="/contacts">Contacts</router-link>
                         </li>
 
                         <!-- <li class="nav-item">
@@ -44,7 +44,7 @@ export default {
 
 
                     </ul>
-                    <div class="admin">
+                    <div class="admin fs-4">
                         <a href="http://127.0.0.1:8000/admin" target="__blank">
                             Admin <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
@@ -63,22 +63,21 @@ export default {
     </header>
 </template>
 
-<style lang=scss scoped>
-$bln-primary: #76BED0;
-$bln-secondary: #F55D3E;
-$bln-success: #F7CB15;
-$bln-light: #ffff;
-$bln-dark: #1b1b1b;
+<style lang=scss>
+@import '../../style.scss';
 
-$bln-sw-warning: #fee003;
+header {
 
-a {
-    color: $bln-sw-warning;
-    text-decoration: none;
-    transition: .5s;
+    /* se metto a o qualsiasi altra cosa si bugga e non da i colori */
+    .test {
+        color: $bln-sw-warning;
+        text-decoration: none;
+        transition: .5s;
 
-    &:hover {
-        color: $bln-secondary;
+
+        &:hover {
+            color: $bln-secondary;
+        }
     }
 }
 </style>
