@@ -46,8 +46,8 @@ export default {
 
     <div v-if="project.title">
 
-        <div class="container">
-            <div class="row">
+        <div class="container py-5">
+            <div class="row py-5">
 
                 <!-- <ProjectCard :project="project"></ProjectCard> -->
 

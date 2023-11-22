@@ -10,8 +10,13 @@ export default {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+
+
+
+    <header style="background-image: url(../../../src/assets/img/space.jpeg);
+    background-size: cover;
+    background-repeat: repeat;">
+        <nav class="navbar navbar-expand-sm navbar-dark">
             <div class="container">
                 <a class="navbar-brand" href="#">Boolfolio</a>
                 <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
@@ -20,10 +25,10 @@ export default {
                 </button>
                 <div class="collapse navbar-collapse" id="mainNav">
                     <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                        <li class="nav-item">
-                            <router-link class="nav-link active" to="/" aria-current="page">Home<span
+                        <!-- <li class="nav-item">
+                            <router-link class="nav-link" to="/" aria-current="page">Home<span
                                     class="visually-hidden">(current)</span></router-link>
-                        </li>
+                        </li> -->
 
 
                         <li class="nav-item">
@@ -40,7 +45,7 @@ export default {
 
                     </ul>
                     <div class="admin">
-                        <a href="http://127.0.0.1:8000/admin" class="btn btn-dark" target="__blank">
+                        <a href="http://127.0.0.1:8000/admin" target="__blank">
                             Admin <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -65,8 +70,10 @@ $bln-success: #F7CB15;
 $bln-light: #ffff;
 $bln-dark: #1b1b1b;
 
+$bln-sw-warning: #fee003;
+
 a {
-    color: white;
+    color: $bln-sw-warning;
     text-decoration: none;
     transition: .5s;
 

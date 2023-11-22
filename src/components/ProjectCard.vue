@@ -18,7 +18,7 @@ export default {
 
 <template>
     <div class="card h-100 text-center">
-        <img class="card-img-top" v-if="thumb" :src="base_url + '/storage/' + thumb" alt="">
+        <img class="card-img-top img-fluid" v-if="thumb" :src="base_url + '/storage/' + thumb" alt="">
 
         <div class="card-body">
 
