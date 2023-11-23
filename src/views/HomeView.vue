@@ -76,13 +76,13 @@ export default {
                     </a>
                 </li>
 
+
                 <li v-if="projects.current_page !== 1" class="page-item"><a @click="prevPage" class="page-link" href="#">{{
                     projects.current_page - 1 }}</a></li>
                 <li class="page-item"><a class="page-link bg-secondary" href="#">{{ projects.current_page }}</a></li>
                 <li v-if="projects.current_page < projects.last_page" class="page-item"><a @click="nextPage"
                         class="page-link" href="#">{{ projects.current_page + 1 }}</a></li>
                 <li class="page-item">
-
                     <!-- se projects.current_page è minore alle pagine totali non lo faccio vedere  (il dato di last_page lo vedo nella consolle vue) -->
 
                     <a v-if="projects.current_page < projects.last_page" class="page-link" @click="goLastPage" href="#"
