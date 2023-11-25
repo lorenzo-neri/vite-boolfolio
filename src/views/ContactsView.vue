@@ -189,6 +189,7 @@ export default {
             </div>
             <div class="loader text-center py-5" v-else>
 
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-2xl"></i>
                 <div class="mt-3">
                     Loading...
                 </div>
