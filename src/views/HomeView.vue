@@ -1,4 +1,20 @@
 <script>
+
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from 'swiper/vue';
+
+// Import Swiper styles
+import 'swiper/css';
+
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+import '../style.scss';
+
+// import required modules
+import { Pagination, Navigation } from 'swiper/modules';
+
+
 import axios from 'axios';
 import ProjectCard from '../components/ProjectCard.vue';
 
@@ -6,7 +22,23 @@ export default {
     name: 'HomeView',
     components: {
         ProjectCard,
+
+
+        Swiper,
+        SwiperSlide,
+
+
     },
+
+
+    setup() {
+        return {
+            modules: [Pagination, Navigation],
+        };
+    },
+
+
+
     data() {
         return {
             /* message: 'Welcome back Vite+Vue', */
@@ -91,6 +123,21 @@ export default {
                     </a>
                 </li>
             </ul>
+        </div>
+
+        <div class="row">
+
+            <swiper :slidesPerView="1" :spaceBetween="30" :loop="true" :pagination="{
+                clickable: true,
+            }" :navigation="true" :modules="modules" class="mySwiper">
+
+
+                <swiper-slide v-for="(project, index) in projects.data" :key="index" :virtualIndex="index">
+                    <div class="rettangolo">{{ project.title }}</div>
+                </swiper-slide>
+
+
+            </swiper>
         </div>
 
         <div class="row row-cols-3">
