@@ -18,10 +18,11 @@ export default {
 
   <!-- MAIN -->
   <main style="
-  background-image: url(../src/assets/img/clone-helmet.jpeg);
-  background-size: cover;">
+  background-image: url(../src/assets/img/space.jpeg);
+  /* background-size: cover; */
+  background-size: contain;">
 
-    <div id="black_square">
+    <div id="">
 
 
       <router-view></router-view>

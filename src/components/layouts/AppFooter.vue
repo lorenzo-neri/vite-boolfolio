@@ -8,8 +8,8 @@ export default {
 
 <template>
     <footer style="background-image: url(../../../src/assets/img/space.jpeg);
-    background-size: contain;
-    background-repeat: repeat;" class="py-3 pt-4 text-light">
+    background-size: cover;
+" class="py-3 pt-4 text-light">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -102,4 +102,8 @@ export default {
 
 <style lang=scss>
 @import '../../style.scss';
+
+footer {
+    border-top: 1px solid $bln-sw-warning;
+}
 </style>

@@ -13,7 +13,7 @@ export default {
 
 
 
-    <header style="background-image: url(../../../src/assets/img/space.jpeg);
+    <header class="py-3" style="background-image: url(../../../src/assets/img/space.jpeg);
     background-size: cover;
     background-repeat: repeat;">
         <nav class="navbar navbar-expand-sm navbar-dark">
@@ -30,6 +30,10 @@ export default {
                                     class="visually-hidden">(current)</span></router-link>
                         </li> -->
 
+
+                        <li class="nav-item fs-5 ps-5">
+                            <router-link class="nav-link test" to="/projects">Projects</router-link>
+                        </li>
 
                         <li class="nav-item fs-5 ps-5">
                             <router-link class="nav-link test" to="/contacts">Contacts</router-link>
@@ -67,6 +71,8 @@ export default {
 @import '../../style.scss';
 
 header {
+
+    border-bottom: 1px solid $bln-sw-warning;
 
     /* se metto a o qualsiasi altra cosa si bugga e non da i colori */
     .test {
