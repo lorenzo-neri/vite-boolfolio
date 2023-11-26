@@ -21,10 +21,10 @@ const routes = [
         path: '/', component: HomeView
     },
     {
-        path: '/project/:slug', name: 'project', component: SingleProjectView
+        path: '/projects', name: 'projects', component: ProjectsView
     },
     {
-        path: '/projects', name: 'projects', component: ProjectsView
+        path: '/project/:slug', name: 'project', component: SingleProjectView
     },
     {
         path: '/contacts', name: 'ContactsView', component: ContactsView
