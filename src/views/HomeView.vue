@@ -72,24 +72,40 @@ export default {
 
     <!--  <div v-if="projects.title"> -->
 
-    <div class="container p-2 min-vh-100">
+    <div class="min-vh-100">
 
 
-        <div class="row">
-
-            <swiper :slidesPerView="1" :spaceBetween="30" :loop="true" :pagination="{
-                clickable: true,
-            }" :navigation="true" :modules="modules" class="mySwiper">
-
-
-                <swiper-slide v-for="(project, index) in projects.data" :key="index" :virtualIndex="index">
-                    <div class="rettangolo">{{ project.title }}</div>
-                </swiper-slide>
-
-
-            </swiper>
+        <div class="p-5 mb-4 bg-black sw_warning">
+            <div class="container py-5">
+                <div class="display-5 fw-bold">
+                    Vuoi sapere da quale pianeta provengo?
+                </div>
+                <router-link to="/about-me" class="display-5 fw-bold text-black btn btn-danger mt-4">
+                    About me
+                </router-link>
+            </div>
         </div>
 
+
+        <div class="container p-2">
+
+
+            <div class="row">
+
+                <swiper :slidesPerView="1" :spaceBetween="30" :loop="true" :pagination="{
+                    clickable: true,
+                }" :navigation="true" :modules="modules" class="mySwiper">
+
+
+                    <swiper-slide v-for="(project, index) in projects.data" :key="index" :virtualIndex="index">
+                        <div class="rettangolo">{{ project.title }}</div>
+                    </swiper-slide>
+
+
+                </swiper>
+            </div>
+
+        </div>
     </div>
 </template>
 

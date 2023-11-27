@@ -22,7 +22,7 @@ export default {
   /* background-size: cover; */
   background-size: contain;">
 
-    <div id="">
+    <div class="py-4">
 
 
       <router-view></router-view>

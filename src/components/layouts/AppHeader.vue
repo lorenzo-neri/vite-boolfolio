@@ -36,16 +36,12 @@ export default {
                         </li>
 
                         <li class="nav-item fs-5 ps-5">
+                            <router-link class="nav-link test" to="/about-me">About me</router-link>
+                        </li>
+
+                        <li class="nav-item fs-5 ps-5">
                             <router-link class="nav-link test" to="/contacts">Contacts</router-link>
                         </li>
-
-                        <!-- <li class="nav-item">
-                            <router-link class="nav-link" to="/blog">Blog</router-link>
-                        </li>
-                        <li class="nav-item">
-                            <router-link class="nav-link" to="/contacts">Contacts</router-link>
-                        </li> -->
-
 
                     </ul>
                     <div class="admin fs-4">

@@ -126,7 +126,7 @@ export default {
 @import url(../../src/style.scss);
 
 $bln-primary: #76BED0;
-$bln-secondary: #F55D3E;
+$bln-secondary: #dc3543;
 $bln-success: #F7CB15;
 $bln-light: #ffff;
 $bln-dark: #1b1b1b;

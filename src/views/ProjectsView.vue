@@ -60,7 +60,7 @@ export default {
 </script>
 
 <template>
-    <div class="container py-4 min-vh-100">
+    <div class="container min-vh-100">
 
         <div class="row">
 
@@ -99,8 +99,6 @@ export default {
 
         <div class="row row-cols-3">
             <div v-for="project in  projects.data" class="col p-3">
-
-
 
                 <ProjectCard :thumb="project.thumb" :base_url="base_url" :title="project.title" :type="project.type"
                     :description="project.description" :link_github="project.link_github"
@@ -150,7 +148,7 @@ export default {
 <style lang=scss scoped>
 $bln-sw-warning: #fee003;
 $bln-primary: #76BED0;
-$bln-secondary: #F55D3E;
+$bln-secondary: #dc3543;
 
 .page-link {
     color: $bln-sw-warning;

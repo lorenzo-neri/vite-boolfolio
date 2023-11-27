@@ -75,7 +75,7 @@ export default {
                 <div class="display-5 fw-bold">
                     Che la Forza sia nella tua richiesta.
                 </div>
-                <div class="display-5 fw-bold">
+                <div class="display-5 fw-bold mt-4">
                     Contattami.
                 </div>
             </div>
