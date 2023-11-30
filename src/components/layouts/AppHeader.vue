@@ -65,9 +65,13 @@ export default {
 
 <style lang=scss>
 @import '../../style.scss';
+/* @use '../../src/assets/scss/app.scss' as *; */
 
 header {
 
+    position: fixed;
+    z-index: 99;
+    width: 100%;
     border-bottom: 1px solid $bln-sw-warning;
 
     /* se metto a o qualsiasi altra cosa si bugga e non da i colori */

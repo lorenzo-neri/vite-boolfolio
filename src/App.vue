@@ -22,10 +22,15 @@ export default {
   /* background-size: cover; */
   background-size: contain;">
 
-    <div class="py-4">
+    <div class="py-5">
 
+      <div class="pt-5">
+        <div class="pt-3">
 
-      <router-view></router-view>
+          <router-view></router-view>
+
+        </div>
+      </div>
 
     </div>
 
