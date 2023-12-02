@@ -3,18 +3,22 @@ import axios from 'axios';
 
 import { state } from '../state';
 
+
+
 import ProjectCard from '../components/ProjectCard.vue';
 
 export default {
-    name: 'ProjectsView',
+    name: 'SingleTypeView',
     components: {
         ProjectCard,
     },
     data() {
         return {
             base_url: 'http://127.0.0.1:8000',
-            portfolio_api: '/api/projects?page=',
+            portfolio_api: '/api/types/',
             projects: [],
+
+            projectsType: null,
 
             currentPage: 1,
 
@@ -25,10 +29,11 @@ export default {
     methods: {
         axiosCall: function () {
             axios
-                .get(this.base_url + this.portfolio_api + this.currentPage)
+                .get(this.base_url + this.portfolio_api + this.$route.params.slug)
                 .then(response => {
-                    //console.log(response);
-                    this.projects = response.data.result;
+                    console.log(response);
+                    this.projectsType = response.data.result;
+                    console.log(this.projectsType);
                 })
                 .catch(err => {
                     console.error(err);
@@ -79,12 +84,14 @@ export default {
                 </button>
                 <ul class="dropdown-menu border border-black shadow">
 
-                    <router-link class="dropdown-item" v-for="type in this.state.types" :to="{
-                        name: 'single_type',
-                        params: { slug: type.slug }
-                    }">
-                        {{ type.type }}
-                    </router-link>
+                    <div @click="axiosCall">
+                        <router-link class="dropdown-item" v-for="type in this.state.types" :to="{
+                            name: 'single_type',
+                            params: { slug: type.slug }
+                        }">
+                            {{ type.type }}
+                        </router-link>
+                    </div>
 
                 </ul>
             </div>
@@ -122,8 +129,8 @@ export default {
         <!-- /.row -->
 
 
-        <div class="row row-cols-3">
-            <div v-for="project in  projects.data" class="col p-3">
+        <div v-if="projectsType" class="row row-cols-3">
+            <div v-for="project in projectsType.projects" class="col p-3">
 
                 <ProjectCard :project="project"></ProjectCard>
 
@@ -167,7 +174,7 @@ export default {
     </div>
 </template>
 
-<style lang=scss>
+<style lang=scss scoped>
 @use '../style.scss' as *;
 
 .dropdown>button {
@@ -190,6 +197,7 @@ export default {
         background-color: black;
     }
 }
+
 
 
 .page-link {

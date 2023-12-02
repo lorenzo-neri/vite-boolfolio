@@ -32,7 +32,7 @@ export default {
 
             console.log(payload);
 
-            axios.post(this.state.base_url + '/api/contacts', payload)
+            axios.post(this.state.base_url + 'api/contacts', payload)
                 .then(response => {
 
                     const success = response.data.success;
