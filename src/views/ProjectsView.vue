@@ -1,5 +1,8 @@
 <script>
 import axios from 'axios';
+
+import { state } from '../state';
+
 import ProjectCard from '../components/ProjectCard.vue';
 
 export default {
@@ -14,6 +17,8 @@ export default {
             projects: [],
 
             currentPage: 1,
+
+            state,
 
         }
     },
@@ -54,6 +59,7 @@ export default {
     },
     mounted() {
         this.axiosCall()
+        this.state.getTypes()
     }
 
 }
@@ -63,6 +69,25 @@ export default {
     <div class="container min-vh-100">
 
         <div class="row">
+
+
+            <!-- TYPE  DROPDOWNFILTER -->
+            <div class="dropdown open d-inline-block mt-4">
+                <button class="btn dropdown-toggle border border-white bg-white shadow" type="button" id="typefilter"
+                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Filter by Type
+                </button>
+                <ul class="dropdown-menu border border-white bg-white shadow">
+
+                    <router-link class="dropdown-item" v-for="type in this.state.types" :to="{
+                        name: 'type',
+                        params: { slug: type.slug }
+                    }">
+                        {{ type.type }}
+                    </router-link>
+
+                </ul>
+            </div>
 
 
             <div aria-label="Page navigation example">
