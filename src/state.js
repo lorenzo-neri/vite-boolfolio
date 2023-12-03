@@ -14,4 +14,13 @@ export const state = reactive({
                 console.error(err);
             })
     },
+    getTechnologies() {
+        axios.get(this.base_url + 'api/technologies')
+            .then(response => {
+                //console.log('technologies:', response);
+                this.technologies = response.data.result;
+            }).catch(err => {
+                console.error(err);
+            })
+    },
 })

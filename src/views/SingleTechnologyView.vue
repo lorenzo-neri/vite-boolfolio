@@ -8,17 +8,17 @@ import { state } from '../state';
 import ProjectCard from '../components/ProjectCard.vue';
 
 export default {
-    name: 'SingleTypeView',
+    name: 'SingleTechnologyView',
     components: {
         ProjectCard,
     },
     data() {
         return {
             base_url: 'http://127.0.0.1:8000',
-            portfolio_api: '/api/types/',
+            portfolio_api: '/api/technologies/',
             projects: [],
 
-            projectsType: null,
+            projectsTechnology: null,
 
             currentPage: 1,
 
@@ -32,39 +32,18 @@ export default {
                 .get(this.base_url + this.portfolio_api + this.$route.params.slug)
                 .then(response => {
                     console.log(response);
-                    this.projectsType = response.data.result;
+                    this.projectsTechnology = response.data.result;
                     console.log(this.projectsType);
                 })
                 .catch(err => {
                     console.error(err);
                 })
         },
-        nextPage: function () {
-            this.currentPage++
-
-            this.axiosCall()
-        },
-        prevPage: function () {
-            this.currentPage--
-
-            this.axiosCall()
-        },
-        goFirstPage: function () {
-
-            this.currentPage = 1,
-
-                this.axiosCall()
-        },
-        goLastPage: function () {
-
-            this.currentPage = this.projects.last_page,
-
-                this.axiosCall()
-        },
     },
     mounted() {
         this.axiosCall()
         this.state.getTypes()
+        this.state.getTechnologies()
     }
 
 }
@@ -74,7 +53,6 @@ export default {
     <div class="container min-vh-100">
 
         <div class="row">
-
 
             <div class="d-flex gap-2">
 
@@ -120,12 +98,14 @@ export default {
             </div>
 
 
+
+
         </div>
         <!-- /.row -->
 
 
-        <div v-if="projectsType" class="row row-cols-3">
-            <div v-for="project in projectsType.projects" class="col p-3">
+        <div v-if="projectsTechnology" class="row row-cols-3">
+            <div v-for="project in projectsTechnology.projects" class="col p-3">
 
                 <ProjectCard :project="project"></ProjectCard>
 

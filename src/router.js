@@ -9,6 +9,7 @@ import ContactsView from './views/ContactsView.vue'
 import NotFoundView from './views/NotFoundView.vue'
 import AboutMeView from './views/AboutMeView.vue'
 import SingleTypeView from './views/SingleTypeView.vue'
+import SingleTechnologyView from './views/SingleTechnologyView.vue'
 
 // 1. Define route components.
 
@@ -36,6 +37,9 @@ const routes = [
     },
     {
         path: '/type/:slug', name: 'single_type', component: SingleTypeView
+    },
+    {
+        path: '/technology/:slug', name: 'single_tech', component: SingleTechnologyView
     },
     {
         path: '/:pathMatch(.*)*', name: 'NotFoundView', component: NotFoundView
